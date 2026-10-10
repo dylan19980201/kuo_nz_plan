@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紐西蘭南島內陸自駕 · 2027 8天7夜湖泊與星空行程規劃</title>
+<meta name="description" content="Queenstown 到 Christchurch 的紐西蘭南島內陸自駕行程：Milford Sound 峽灣、Te Anau 螢火蟲洞、Wānaka、Aoraki/Mount Cook、Lake Pukaki、Lake Tekapo 暗空觀星的 2027 年 8 天完整規劃。">
+<link href="fonts/fonts.css" rel="stylesheet">
+<style>
+  :root{
+    --forest:#123029;
+    --forest-2:#1c4a3e;
+    --teal:#2f8f80;
+    --glacier:#7fc9c2;
+    --sand:#f6f1e7;
+    --sand-2:#ece3d3;
+    --warm:#c8763c;
+    --warm-2:#e0a35f;
+    --ink:#17211f;
+    --muted:#5d6c67;
+    --line:#ded4c3;
+    --white:#ffffff;
+    --radius:18px;
+    --shadow:0 14px 40px -22px rgba(18,48,41,.45);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang TC','Noto Sans TC',sans-serif;
+    color:var(--ink);
+    background:#fbfaf6;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,'Noto Serif TC',serif;line-height:1.25;margin:0;font-weight:600;letter-spacing:.2px;}
+  p{margin:0 0 1em;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;list-style:none;}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:80;
+    background:rgba(251,250,246,.86);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 26px;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+  }
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:.95rem;letter-spacing:.4px;color:var(--forest);}
+  .brand .leaf{
+    width:26px;height:26px;flex:0 0 26px;border-radius:50%;
+    background:var(--teal);position:relative;
+  }
+  .brand .leaf::after{
+    content:"";position:absolute;inset:7px;border-radius:50% 50% 50% 0;
+    background:var(--sand);transform:rotate(45deg);
+  }
+  .nav-links{display:flex;gap:4px;flex-wrap:wrap;}
+  .nav-links a{
+    font-size:.82rem;padding:7px 12px;border-radius:999px;color:var(--muted);
+    font-weight:500;transition:.2s;white-space:nowrap;
+  }
+  .nav-links a:hover{background:var(--sand-2);color:var(--forest);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:92vh;display:flex;align-items:center;
+    background-image:url('images/queenstown.png');
+    background-size:cover;background-position:center 40%;
+    color:var(--white);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(9,26,22,.62) 0%,rgba(9,26,22,.34) 42%,rgba(9,26,22,.80) 100%);
+  }
+  .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:120px 26px 90px;width:100%;}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:9px;
+    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);
+    padding:7px 16px;border-radius:999px;font-size:.78rem;letter-spacing:1.6px;
+    text-transform:uppercase;font-weight:600;margin-bottom:26px;backdrop-filter:blur(6px);
+  }
+  .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--glacier);}
+  .hero h1{
+    font-size:clamp(2.5rem,6.4vw,5rem);line-height:1.03;font-weight:600;
+    max-width:16ch;text-shadow:0 3px 30px rgba(0,0,0,.4);
+  }
+  .hero h1 em{font-style:italic;color:var(--warm-2);}
+  .hero-sub{
+    font-size:clamp(1rem,2vw,1.22rem);max-width:56ch;margin-top:22px;
+    color:rgba(255,255,255,.93);font-weight:300;
+  }
+  .hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px;}
+  .hero-meta span{
+    background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.26);
+    padding:9px 18px;border-radius:12px;font-size:.85rem;font-weight:500;
+    backdrop-filter:blur(6px);
+  }
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:2px;opacity:.75;}
+
+  /* ---------- LAYOUT ---------- */
+  .section{padding:96px 26px;}
+  .container{max-width:var(--maxw);margin:0 auto;}
+  .section-alt{background:var(--sand);}
+  .eyebrow{
+    display:inline-block;font-size:.76rem;letter-spacing:2.4px;text-transform:uppercase;
+    color:var(--teal);font-weight:700;margin-bottom:14px;
+  }
+  .section-title{font-size:clamp(1.85rem,4vw,2.9rem);color:var(--forest);margin-bottom:16px;}
+  .section-lead{max-width:66ch;color:var(--muted);font-size:1.03rem;}
+  .section-head{margin-bottom:52px;}
+
+  /* ---------- STATS ---------- */
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;margin-top:44px;
+  }
+  .stat{background:#fff;padding:26px 20px;text-align:center;}
+  .stat b{display:block;font-family:'Fraunces',serif;font-size:1.85rem;color:var(--forest);font-weight:600;line-height:1.2;}
+  .stat small{font-size:.76rem;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:600;}
+
+  /* ---------- MAP ---------- */
+  .map-wrap{
+    background:#fff;border:1px solid var(--line);border-radius:24px;
+    padding:26px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  .map-wrap svg{width:100%;height:auto;display:block;}
+  .map-legend{display:flex;flex-wrap:wrap;gap:20px;margin-top:20px;padding-top:20px;border-top:1px dashed var(--line);font-size:.82rem;color:var(--muted);}
+  .map-legend i{display:inline-block;width:22px;height:3px;border-radius:2px;vertical-align:middle;margin-right:8px;}
+
+  /* ---------- LEG STRIP ---------- */
+  .legs{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:14px;margin-top:32px;}
+  .leg{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);}
+  .leg .d{font-size:.7rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--warm);font-weight:700;}
+  .leg .r{font-size:.9rem;font-weight:600;color:var(--forest);margin:5px 0 7px;line-height:1.4;}
+  .leg .n{font-size:.79rem;color:var(--teal);font-weight:700;}
+
+  .route-note{
+    margin-top:34px;background:#fff;border-left:4px solid var(--warm);
+    border-radius:0 14px 14px 0;padding:22px 26px;box-shadow:var(--shadow);
+  }
+  .route-note h4{color:var(--forest);font-size:1.1rem;margin-bottom:8px;}
+  .route-note p{margin:0;color:var(--muted);font-size:.94rem;}
+  .route-note b{color:var(--forest);}
+
+  /* ---------- DAY CARDS ---------- */
+  .day{
+    background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;
+    margin-bottom:38px;box-shadow:var(--shadow);
+    display:grid;grid-template-columns:0.9fr 1.1fr;
+  }
+  .day:nth-child(even){grid-template-columns:1.1fr 0.9fr;}
+  .day:nth-child(even) .day-img{order:2;}
+  .day-img{position:relative;min-height:330px;background-size:cover;background-position:center;}
+  .day-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,26,22,0),rgba(9,26,22,.35));}
+  .day-badge{
+    position:absolute;top:20px;left:20px;z-index:2;
+    background:var(--forest);color:#fff;border-radius:14px;padding:9px 15px;
+    text-align:center;line-height:1.1;box-shadow:0 8px 22px -8px rgba(0,0,0,.6);
+  }
+  .day-badge b{display:block;font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;}
+  .day-badge small{font-size:.66rem;letter-spacing:1.6px;text-transform:uppercase;opacity:.85;}
+  .day-body{padding:34px 36px;}
+  .day-date{font-size:.78rem;letter-spacing:1.6px;text-transform:uppercase;color:var(--warm);font-weight:700;margin-bottom:8px;}
+  .day-body h3{font-size:1.5rem;color:var(--forest);margin-bottom:6px;}
+  .day-route{font-size:.92rem;color:var(--teal);font-weight:600;margin-bottom:18px;}
+  .route-chip{
+    display:inline-flex;align-items:center;gap:8px;background:var(--sand);
+    border-radius:10px;padding:9px 15px;font-size:.83rem;font-weight:600;color:var(--forest);
+    margin-bottom:20px;
+  }
+  .route-chip .sep{color:var(--line);}
+  .day-list{margin-bottom:20px;}
+  .day-list li{position:relative;padding-left:26px;margin-bottom:10px;font-size:.94rem;color:#33423f;}
+  .day-list li::before{
+    content:"";position:absolute;left:5px;top:.65em;width:7px;height:7px;border-radius:50%;
+    background:var(--glacier);
+  }
+  .day-list li b{color:var(--forest);font-weight:600;}
+  .stay{
+    display:flex;align-items:center;gap:10px;background:var(--sand);border-radius:12px;
+    padding:12px 16px;font-size:.88rem;font-weight:600;color:var(--forest);
+  }
+  .stay svg{flex:0 0 18px;width:18px;height:18px;stroke:var(--warm);}
+  .tip{
+    margin-top:14px;font-size:.86rem;color:var(--muted);background:#fdfbf6;
+    border:1px dashed var(--line);border-radius:12px;padding:13px 16px;
+  }
+  .tip b{color:var(--warm);}
+
+  /* ---------- HIGHLIGHTS ---------- */
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px;}
+  .spot{
+    background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+    box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;
+  }
+  .spot:hover{transform:translateY(-5px);box-shadow:0 22px 50px -24px rgba(18,48,41,.55);}
+  .spot-img{height:210px;background-size:cover;background-position:center;position:relative;}
+  .spot-tag{
+    position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);color:var(--forest);
+    font-size:.7rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
+    padding:6px 12px;border-radius:8px;
+  }
+  .spot-body{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column;}
+  .spot-body h4{font-size:1.16rem;color:var(--forest);margin-bottom:6px;}
+  .spot-body .en{font-size:.78rem;color:var(--teal);font-weight:600;letter-spacing:.4px;margin-bottom:10px;}
+  .spot-body p{font-size:.9rem;color:var(--muted);margin:0 0 14px;}
+  .spot-meta{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--ink);font-weight:600;}
+  .spot-meta span{background:var(--sand);border-radius:8px;padding:5px 11px;}
+
+  /* ---------- INFO BLOCKS ---------- */
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
+  .info-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 30px 28px;box-shadow:var(--shadow);}
+  .info-card .ico{
+    width:46px;height:46px;border-radius:13px;background:var(--forest);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;
+    font-size:1.25rem;font-weight:600;margin-bottom:18px;
+  }
+  .info-card h4{font-size:1.18rem;color:var(--forest);margin-bottom:14px;}
+  .info-card ul li{position:relative;padding-left:22px;margin-bottom:11px;font-size:.91rem;color:#3a4845;}
+  .info-card ul li::before{content:"";position:absolute;left:2px;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--warm);}
+  .info-card ul li b{color:var(--forest);}
+
+  /* ---------- WEATHER FACTS ---------- */
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:8px;}
+  .fact{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;text-align:center;box-shadow:var(--shadow);}
+  .fact .big{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--teal);font-weight:600;line-height:1.1;}
+  .fact p{font-size:.84rem;color:var(--muted);margin:8px 0 0;}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative;padding-left:34px;margin-top:10px;}
+  .timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .tl-item{position:relative;margin-bottom:26px;}
+  .tl-item::before{
+    content:"";position:absolute;left:-33px;top:5px;width:18px;height:18px;border-radius:50%;
+    background:#fff;border:3px solid var(--teal);
+  }
+  .tl-time{font-size:.76rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--warm);font-weight:700;}
+  .tl-item h4{font-size:1.06rem;color:var(--forest);margin:3px 0 4px;}
+  .tl-item p{font-size:.9rem;color:var(--muted);margin:0;}
+
+  .alert{
+    background:var(--forest);color:#fff;border-radius:20px;padding:32px 34px;margin-top:40px;
+  }
+  .alert h3{color:#fff;font-size:1.35rem;margin-bottom:12px;}
+  .alert p{color:rgba(255,255,255,.88);font-size:.95rem;margin:0 0 10px;}
+  .alert p:last-child{margin-bottom:0;}
+  .alert b{color:var(--warm-2);}
+
+  /* ---------- STAY TABLE ---------- */
+  .stay-table{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);}
+  .stay-table th{background:var(--forest);color:#fff;text-align:left;padding:15px 20px;font-size:.8rem;letter-spacing:1.2px;text-transform:uppercase;font-weight:600;}
+  .stay-table td{padding:15px 20px;border-bottom:1px solid var(--line);font-size:.9rem;}
+  .stay-table tr:last-child td{border-bottom:none;}
+  .stay-table td:first-child{font-weight:700;color:var(--forest);white-space:nowrap;}
+  .stay-table td:nth-child(2){color:var(--teal);font-weight:600;white-space:nowrap;}
+  .stay-table tr:nth-child(even){background:#fdfcf8;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest);color:rgba(255,255,255,.72);padding:56px 26px 40px;text-align:center;}
+  footer .f-brand{font-family:'Fraunces',serif;font-size:1.4rem;color:#fff;margin-bottom:10px;}
+  footer p{font-size:.83rem;max-width:60ch;margin:0 auto 8px;}
+  footer .f-line{height:1px;width:60px;background:var(--teal);margin:22px auto;}
+
+  .reveal{transform:translateY(26px);transition:transform .75s cubic-bezier(.22,.61,.36,1);}
+  .reveal.in{transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{transform:none;transition:none;}}
+
+  @media(max-width:900px){
+    .day,.day:nth-child(even){grid-template-columns:1fr;}
+    .day:nth-child(even) .day-img{order:0;}
+    .day-img{min-height:260px;}
+    .day-body{padding:28px 24px;}
+    .nav-links{display:none;}
+    .section{padding:68px 20px;}
+  }
+  @media(max-width:560px){
+    .hero{min-height:88vh;}
+    .hero-inner{padding:96px 20px 70px;}
+    .stay-table th,.stay-table td{padding:12px 13px;font-size:.82rem;}
+    .stay-table td:first-child,.stay-table td:nth-child(2){white-space:normal;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="leaf"></span>NZ SOUTH ISLAND · ROAD TRIP</div>
+    <div class="nav-links">
+      <a href="#overview">路線總覽</a>
+      <a href="#itinerary">每日行程</a>
+      <a href="#spots">必去景點</a>
+      <a href="#driving">自駕提醒</a>
+      <a href="#practical">實用資訊</a>
+      <a href="#departure">離境規劃</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag"><span class="dot"></span>2027 · 夏末初秋 · 內陸自駕</span>
+    <h1>紐西蘭南島<br><em>高山湖泊</em>與星空</h1>
+    <p class="hero-sub">2027 年夏末初秋，從皇后鎮的湖光山色出發，深入 Fiordland 的米佛峽灣，再折向內陸翻越 Lindis Pass、駛入 Mackenzie 盆地，一路收下庫克山、普卡基湖與蒂卡波湖的星空，最後在基督城畫下句點。一趟寫給熱愛壯闊風景與健行步道的你。</p>
+    <div class="hero-meta">
+      <span>2027 年 2/27（六）– 3/6（六）· 8天7夜</span>
+      <span>Queenstown → Christchurch</span>
+      <span>自駕 · 靠左行駛</span>
+      <span>約 1,240 公里</span>
+    </div>
+    <div class="scroll-hint">向下探索 ↓</div>
+  </div>
+</header>
+
+<!-- OVERVIEW -->
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Route Overview</span>
+      <h2 class="section-title">推薦路線總覽</h2>
+      <p class="section-lead">以「南島內陸 · 由南向北、由西向東」的走法：先南下深入 Fiordland 峽灣，再折返經皇后鎮、箭鎮前往瓦納卡，翻越 Lindis Pass 進入 Mackenzie 盆地，看過庫克山與蒂卡波湖的星空後，沿內陸公路直抵基督城。全程不走西海岸冰川，換來的是更短的行車距離與更從容的步調。</p>
+    </div>
+
+    <div class="map-wrap reveal">
+      <svg viewBox="0 0 900 580" role="img" aria-label="南島內陸自駕路線示意圖">
+        <defs>
+          <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#eaf1ee"/><stop offset="1" stop-color="#dfeae6"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="900" height="580" rx="18" fill="url(#sea)"/>
+        <text x="36" y="46" font-family="Inter,sans-serif" font-size="17" font-weight="700" fill="#123029" letter-spacing="2">2027</text>
+        <text x="36" y="64" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" fill="#8a9993" letter-spacing="1.6">SOUTH ISLAND · NEW ZEALAND</text>
+        <!-- land mass -->
+        <path d="M62,318 C54,222 104,142 200,112 C300,80 400,98 500,84 C608,68 716,64 796,82 C862,97 880,132 870,186 C860,240 838,288 836,346 C834,414 796,478 736,516 C664,560 552,560 452,544 C350,526 244,544 166,504 C106,474 70,404 62,318 Z"
+              fill="#f6f2e6" stroke="#e2d9c6" stroke-width="2"/>
+        <!-- mountain range motif -->
+        <g stroke="#c8bfa9" stroke-width="2.4" fill="none" opacity=".7">
+          <path d="M250,430 l30,-34 l22,26 l26,-40 l34,48"/>
+          <path d="M470,250 l28,-32 l20,24 l26,-38 l32,46"/>
+          <path d="M690,120 l24,-28 l18,20 l22,-34 l28,42"/>
+        </g>
+        <!-- Milford spur (out and back) -->
+        <path d="M128,468 C118,432 104,400 96,372" fill="none" stroke="#c8763c" stroke-width="3" stroke-dasharray="8 8" stroke-linecap="round"/>
+        <!-- Mount Cook spur (out and back) -->
+        <path d="M590,236 C600,206 608,184 616,164" fill="none" stroke="#c8763c" stroke-width="3" stroke-dasharray="8 8" stroke-linecap="round"/>
+        <!-- main route -->
+        <path d="M128,468 C172,488 208,492 245,478 C272,466 288,456 300,448 C332,428 364,404 392,386 C424,368 458,350 488,332 C516,316 540,298 560,282 C572,268 582,250 590,236 C616,240 650,242 682,244 C724,240 788,200 836,150"
+              fill="none" stroke="#2f8f80" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- nodes -->
+        <g font-family="Inter,sans-serif">
+          <g>
+            <circle cx="245" cy="478" r="12" fill="#123029" stroke="#fff" stroke-width="3"/>
+            <text x="245" y="508" text-anchor="middle" font-size="14" font-weight="700" fill="#123029">Queenstown</text>
+            <text x="245" y="524" text-anchor="middle" font-size="11" font-weight="600" fill="#c8763c">2/27 六</text>
+          </g>
+          <g>
+            <circle cx="128" cy="468" r="11" fill="#2f8f80" stroke="#fff" stroke-width="3"/>
+            <text x="112" y="446" text-anchor="middle" font-size="14" font-weight="600" fill="#33423f">Te Anau</text>
+            <text x="112" y="500" text-anchor="middle" font-size="11" font-weight="600" fill="#c8763c">2/28 日 · 3/1 一</text>
+          </g>
+          <g>
+            <circle cx="96" cy="372" r="11" fill="#c8763c" stroke="#fff" stroke-width="3"/>
+            <text x="96" y="350" text-anchor="middle" font-size="14" font-weight="700" fill="#c8763c">Milford Sound</text>
+            <text x="96" y="332" text-anchor="middle" font-size="11" font-weight="600" fill="#c8763c">3/1 一</text>
+          </g>
+          <g>
+            <circle cx="392" cy="386" r="11" fill="#2f8f80" stroke="#fff" stroke-width="3"/>
+            <text x="386" y="364" text-anchor="middle" font-size="14" font-weight="600" fill="#33423f">Wānaka</text>
+            <text x="386" y="416" text-anchor="middle" font-size="11" font-weight="600" fill="#c8763c">3/2 二</text>
+          </g>
+          <g>
+            <circle cx="488" cy="332" r="7" fill="#7fc9c2" stroke="#fff" stroke-width="2.5"/>
+            <text x="488" y="316" text-anchor="middle" font-size="12" font-weight="600" fill="#5d6c67">Lindis Pass</text>
+          </g>
+          <g>
+            <circle cx="560" cy="282" r="8" fill="#7fc9c2" stroke="#fff" stroke-width="2.5"/>
+            <text x="556" y="266" text-anchor="middle" font-size="12" font-weight="600" fill="#5d6c67">Twizel</text>
+          </g>
+          <g>
+            <circle cx="616" cy="164" r="11" fill="#c8763c" stroke="#fff" stroke-width="3"/>
+            <text x="640" y="152" text-anchor="start" font-size="14" font-weight="700" fill="#c8763c">Mt Cook</text>
+            <text x="640" y="168" text-anchor="start" font-size="11" font-weight="600" fill="#c8763c">3/3 三</text>
+          </g>
+          <g>
+            <circle cx="682" cy="244" r="11" fill="#2f8f80" stroke="#fff" stroke-width="3"/>
+            <text x="682" y="274" text-anchor="middle" font-size="14" font-weight="600" fill="#33423f">Lake Tekapo</text>
+            <text x="682" y="290" text-anchor="middle" font-size="11" font-weight="600" fill="#c8763c">3/4 四</text>
+          </g>
+          <g>
+            <circle cx="836" cy="150" r="12" fill="#123029" stroke="#fff" stroke-width="3"/>
+            <text x="836" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#123029">Christchurch</text>
+            <text x="836" y="180" text-anchor="middle" font-size="11" font-weight="600" fill="#c8763c">3/5 五</text>
+          </g>
+        </g>
+        <!-- compass -->
+        <g transform="translate(818,486)">
+          <circle r="30" fill="#fff" stroke="#ded4c3" stroke-width="1.5"/>
+          <path d="M0,-18 L6,4 L0,-1 L-6,4 Z" fill="#c8763c"/>
+          <text y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#123029" font-family="Inter,sans-serif">N</text>
+        </g>
+      </svg>
+      <div class="map-legend">
+        <span><i style="background:#2f8f80"></i>主要行車路線</span>
+        <span><i style="background:#c8763c;height:0;border-top:3px dashed #c8763c;width:22px"></i>原路折返支線（Milford / Mt Cook）</span>
+        <span><i style="background:#123029"></i>起點 / 終點</span>
+        <span><i style="background:#7fc9c2"></i>路線中繼點</span>
+      </div>
+    </div>
+
+    <div class="legs reveal">
+      <div class="leg"><div class="d">Day 2 · 2/28（日）</div><div class="r">Queenstown → Te Anau</div><div class="n">≈171 km · 車程 ≈2.5 h</div></div>
+      <div class="leg"><div class="d">Day 3 · 3/1（一）</div><div class="r">Te Anau → Milford Sound → Te Anau</div><div class="n">≈240 km 往返 · 車程 ≈4 h</div></div>
+      <div class="leg"><div class="d">Day 4 · 3/2（二）</div><div class="r">Te Anau → Queenstown · Arrowtown → Wānaka</div><div class="n">≈260 km · 車程 ≈3.5–4 h</div></div>
+      <div class="leg"><div class="d">Day 5 · 3/3（三）</div><div class="r">Wānaka → Lindis Pass → Twizel / Mt Cook</div><div class="n">≈165–220 km · 車程 ≈2.5–3 h</div></div>
+      <div class="leg"><div class="d">Day 6 · 3/4（四）</div><div class="r">Mt Cook → Lake Tekapo</div><div class="n">≈105 km · 車程 ≈1.5 h</div></div>
+      <div class="leg"><div class="d">Day 7 · 3/5（五）</div><div class="r">Lake Tekapo → Christchurch</div><div class="n">≈227 km · 車程 ≈3 h</div></div>
+      <div class="leg"><div class="d">Day 8 · 3/6（六）</div><div class="r">Christchurch → 基督城機場</div><div class="n">≈15 km · 車程 ≈20–30 min</div></div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><b>8</b><small>天數</small></div>
+      <div class="stat"><b>≈1,240</b><small>總行車公里</small></div>
+      <div class="stat"><b>≈17.5h</b><small>總純車程</small></div>
+      <div class="stat"><b>3</b><small>座國家公園</small></div>
+      <div class="stat"><b>1</b><small>暗空保護區</small></div>
+      <div class="stat"><b>3/6</b><small>17:00 班機</small></div>
+    </div>
+
+    <div class="route-note reveal">
+      <h4>路線設計邏輯</h4>
+      <p>這條走法把「冰川西海岸」整段拿掉，改成南島內陸的湖泊與高山軸線：<b>Queenstown → Te Anau → Milford Sound → Te Anau → Queenstown / Arrowtown → Wānaka → Lindis Pass → Twizel / Mount Cook → Lake Tekapo → Christchurch</b>。Te Anau 連住兩晚，是為了讓米佛峽灣「前後各一晚」——不必從皇后鎮當天長途往返（單程 171 km 再加 118 km，來回近 6 小時純車程），遊船也能排在光線最柔和的早班。後半段改走 Lindis Pass 進入 Mackenzie 盆地，換來的是庫克山與蒂卡波湖：南島最高的山、最藍的湖、最黑的夜空。最後一晚鐵了心住基督城，把 3/6 的 17:00 班機風險降到零。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="section section-alt" id="itinerary">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Day by Day</span>
+      <h2 class="section-title">每日行程表</h2>
+      <p class="section-lead">2027 年 2 月 27 日 – 3 月 6 日 · 共 8 天 7 夜。行車時間為「不含停留」的純車程估算；南島山路蜿蜒、單線橋多，實際用時建議再加 30–50% 的停留與休息時間。</p>
+    </div>
+
+    <!-- Day 1 -->
+    <article class="day reveal">
+      <div class="day-img" style="background-image:url('images/queenstown.png')">
+        <div class="day-badge"><b>01</b><small>2/27 六</small></div>
+      </div>
+      <div class="day-body">
+        <div class="day-date">Day 1 · 2月27日（六）</div>
+        <h3>抵達皇后鎮 · 取車與休息</h3>
+        <div class="day-route">Queenstown Airport → Queenstown Town</div>
+        <div class="route-chip">≈10 km <span class="sep">·</span> 車程 ≈20 min</div>
+        <ul class="day-list">
+          <li><b>抵達</b>：飛抵 Queenstown（ZQN），入境後前往租車櫃檯辦理取車；若班機深夜抵達，建議改為隔天早上取車，今晚先休息。</li>
+          <li><b>補給</b>：先在 Frankton 的<b>大型超市</b>（Pak'nSave / Woolworths）買水、零食與隔日早餐，皇后鎮市區物價較高。</li>
+          <li><b>傍晚</b>：<b>Lake Wakatipu 湖濱步道</b>散步、看 Remarkables 山脈的暮色，鎮上晚餐。</li>
+          <li><b>早睡</b>：調整時差，明天起每天都有行程。</li>
+        </ul>
+        <div class="stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          住宿：Queenstown（1 晚）
+        </div>
+        <div class="tip"><b>提醒：</b>皇后鎮市區停車位珍貴且收費，訂房時優先選「附停車位」的住宿；取車後先熟悉右駕車的方向燈與雨刷位置再上路。</div>
+      </div>
+    </article>
+
+    <!-- Day 2 -->
+    <article class="day reveal">
+      <div class="day-img" style="background-image:url('images/teanau.png')">
+        <div class="day-badge"><b>02</b><small>2/28 日</small></div>
+      </div>
+      <div class="day-body">
+        <div class="day-date">Day 2 · 2月28日（日）</div>
+        <h3>皇后鎮 → 蒂阿瑙 · 峽灣的前哨</h3>
+        <div class="day-route">Queenstown → Te Anau（SH6 / SH94）</div>
+        <div class="route-chip">≈171 km <span class="sep">·</span> 車程 ≈2.5 h</div>
+        <ul class="day-list">
+          <li><b>上午</b>：沿 <b>Lake Wakatipu</b> 南岸出發，先停 <b>Devil's Staircase 惡魔階梯</b>觀景台俯瞰瓦卡蒂普湖，續行經 Kingston、Garston。</li>
+          <li><b>沿途</b>：<b>Wilderness Scientific Reserve</b> 荒野保護區（紅草甸與遠山，快閃 10–15 分鐘）。</li>
+          <li><b>中午</b>：抵 Te Anau 補給、加油、午餐（湖濱的 Miles Better Pies 是經典）。</li>
+          <li><b>下午</b>：湖畔步道散步，前往 <b>DOC 遊客中心</b>確認米佛公路路況與天氣。</li>
+          <li><b>傍晚</b>：參加 <b>Te Anau 螢火蟲洞（Glowworm Caves）</b>導覽——搭船橫渡蒂阿瑙湖，走進地下石灰岩洞看滿天藍綠光點。</li>
+        </ul>
+        <div class="stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          住宿：Te Anau（第 1 晚）
+        </div>
+        <div class="tip"><b>重點提醒：</b><b>Milford Sound 沒有加油站</b>，今天務必在 Te Anau 把油加滿；峽灣內手機訊號極弱，出發前先下載離線地圖。</div>
+      </div>
+    </article>
+
+    <!-- Day 3 -->
+    <article class="day reveal">
+      <div class="day-img" style="background-image:url('images/milford.png')">
+        <div class="day-badge"><b>03</b><small>3/1 一</small></div>
+      </div>
+      <div class="day-body">
+        <div class="day-date">Day 3 · 3月1日（一）</div>
+        <h3>米佛峽灣一日遊 · 原路返回蒂阿瑙</h3>
+        <div class="day-route">Te Anau → Milford Sound → Te Anau</div>
+        <div class="route-chip">≈240 km 往返 <span class="sep">·</span> 車程 ≈4 h（不含停留與遊船）</div>
+        <ul class="day-list">
+          <li><b>清晨出發</b>：走 <b>Milford Road（SH94）</b>——Eglinton Valley 冰蝕谷、<b>Mirror Lakes 鏡湖</b>、Hollyford Valley 展望、Monkey Creek、<b>Homer Tunnel 荷馬隧道</b>、The Chasm 查森瀑布。</li>
+          <li><b>上午</b>：<b>Milford Sound 峽灣遊船</b>（建議 09:00–10:00 早班，光線最柔、團客最少，約 2 小時）：Mitre Peak 米特峰、Bowen Falls、Stirling Falls 與海豹。</li>
+          <li><b>加碼健行</b>：回程在 The Divide 停車，走 <b>Key Summit Track</b>（來回約 3 小時），俯瞰 Hollyford / Greenstone 山谷。</li>
+          <li><b>傍晚</b>：約 16:00 返回 Te Anau，湖濱看夕陽、吃一頓熱食。</li>
+        </ul>
+        <div class="stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          住宿：Te Anau（第 2 晚）
+        </div>
+        <div class="tip"><b>拍照筆記：</b>峽灣年均降雨 6–7 公尺，是地球上最濕的地方之一。雨天其實是最好的運氣——岩壁會掛滿上千條瀑布，比晴天更震撼。</div>
+      </div>
+    </article>
+
+    <!-- Day 4 -->
+    <article class="day reveal">
+      <div class="day-img" style="background-image:url('images/arrowtown.png')">
+        <div class="day-badge"><b>04</b><small>3/2 二</small></div>
+      </div>
+      <div class="day-body">
+        <div class="day-date">Day 4 · 3月2日（二）</div>
+        <h3>蒂阿瑙 → 皇后鎮 · 箭鎮 → 瓦納卡</h3>
+        <div class="day-route">Te Anau → Queenstown → Arrowtown → Wānaka</div>
+        <div class="route-chip">≈260 km <span class="sep">·</span> 車程 ≈3.5–4 h</div>
+        <ul class="day-list">
+          <li><b>上午</b>：沿 Lake Wakatipu 北上回到皇后鎮，可搭 <b>Skyline Gondola</b> 看全鎮全景，或到 <b>Kawarau Bridge</b> 看高空彈跳發源地。</li>
+          <li><b>中午</b>：繞進 <b>Arrowtown 箭鎮</b>——歷史淘金小鎮，Buckingham Street 木造老街、華人礦工聚落遺址；2 月底白楊樹開始轉黃，極好拍。</li>
+          <li><b>下午</b>：走 <b>Crown Range Road</b> 前往瓦納卡，途中的 <b>Cardrona Hotel</b> 是百年歷史酒館，秋天白楊大道極美。</li>
+          <li><b>傍晚</b>：抵 Wānaka，拍著名的「<b>那棵瓦納卡樹</b>」That Wanaka Tree 湖中倒影，湖濱散步享受小鎮氛圍。</li>
+        </ul>
+        <div class="stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          住宿：Wānaka（1 晚）
+        </div>
+        <div class="tip"><b>重點提醒：</b>Crown Range Road 坡度大、彎道多且為高山路段，夜間與低溫時段請放慢；3 月初一般不需雪鏈，但仍要留意清晨低溫與結霜。</div>
+      </div>
+    </article>
+
+    <!-- Day 5 -->
+    <article class="day reveal">
+      <div class="day-img" style="background-image:url('images/lindis_pass.png')">
+        <div class="day-badge"><b>05</b><small>3/3 三</small></div>
+      </div>
+      <div class="day-body">
+        <div class="day-date">Day 5 · 3月3日（三）</div>
+        <h3>瓦納卡 → Lindis Pass → Twizel / 庫克山</h3>
+        <div class="day-route">Wānaka → Lindis Pass → Twizel → Mount Cook Village</div>
+        <div class="route-chip">≈165 km（宿 Twizel）／≈220 km（進駐庫克山）<span class="sep">·</span> 車程 ≈2.5–3 h</div>
+        <ul class="day-list">
+          <li><b>上午</b>：沿 <b>Lake Hāwea</b> 湖岸北上，經 The Neck 展望點，正式翻越 <b>Lindis Pass</b>（海拔 965 m）——金黃色草坡與層疊山稜的公路景觀。</li>
+          <li><b>中午</b>：Omarama 小鎮咖啡補給，續行進入 Mackenzie 盆地。</li>
+          <li><b>下午</b>：經 Twizel，轉入 SH80，在 <b>Lake Pukaki 普卡基湖</b>展望台（Peter's Lookout）看牛奶藍湖水與庫克山同框，再進庫克山國家公園。</li>
+          <li><b>傍晚</b>：輕鬆走 <b>Kea Point Track</b>（來回約 1 小時）看 Mueller 冰河湖，或 Tasman Glacier View / Blue Lakes（約 30 分鐘）。</li>
+        </ul>
+        <div class="stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          住宿：Mount Cook Village 或 Twizel（1 晚）
+        </div>
+        <div class="tip"><b>住宿二選一：</b>庫克山村（Mt Cook Village）就在山腳，隔天一早進山最方便，但住宿選擇極少、務必提前訂；Twizel 約 50 分鐘車程，住宿與餐廳選擇多、價格較親民，適合當備案。</div>
+      </div>
+    </article>
+
+    <!-- Day 6 -->
+    <article class="day reveal">
+      <div class="day-img" style="background-image:url('images/hooker_valley.png')">
+        <div class="day-badge"><b>06</b><small>3/4 四</small></div>
+      </div>
+      <div class="day-body">
+        <div class="day-date">Day 6 · 3月4日（四）</div>
+        <h3>一早進庫克山健行 → 蒂卡波湖 · 觀星</h3>
+        <div class="day-route">Mount Cook Village → Lake Tekapo</div>
+        <div class="route-chip">≈105 km <span class="sep">·</span> 車程 ≈1.5 h（不含健行）</div>
+        <ul class="day-list">
+          <li><b>清早（重點）</b>：走 <b>Hooker Valley Track</b>——10 km 來回、約 3 小時，跨過三座吊橋沿冰河谷前進，終點是漂著冰山的 <b>Hooker 冰河湖</b>，正對 Aoraki／庫克山主峰。全段平緩好走，是南島最經典的一條步道。</li>
+          <li><b>加碼</b>：體力與時間允許可再走 Tasman Glacier View（約 30 分鐘）或 Sealy Tarns（進階，爬升大）。</li>
+          <li><b>下午</b>：南下 Lake Tekapo，湖畔散步、拜訪 <b>Church of the Good Shepherd 好牧羊人教堂</b>、Mt John 天文台（依開放狀況）。</li>
+          <li><b>夜間（重點）</b>：<b>Tekapo 觀星</b>——這裡屬 Aoraki Mackenzie 國際暗空保護區，銀河清晰可見。可自行到湖畔無光害處觀看，或參加 Dark Sky Project 導覽。</li>
+        </ul>
+        <div class="stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          住宿：Lake Tekapo（1 晚）
+        </div>
+        <div class="tip"><b>重點提醒：</b>觀星導覽名額有限，請提前預訂；出發前先查<b>月相</b>（滿月前後夜空最亮，較不利觀星），並備保暖衣物與紅光手電筒。庫克山天候變化快，若清晨天候不佳，可先往 Tekapo、隔日再回補。</div>
+      </div>
+    </article>
+
+    <!-- Day 7 -->
+    <article class="day reveal">
+      <div class="day-img" style="background-image:url('images/tekapo.png')">
+        <div class="day-badge"><b>07</b><small>3/5 五</small></div>
+      </div>
+      <div class="day-body">
+        <div class="day-date">Day 7 · 3月5日（五）</div>
+        <h3>蒂卡波湖 → 基督城</h3>
+        <div class="day-route">Lake Tekapo → Fairlie → Geraldine → Christchurch</div>
+        <div class="route-chip">≈227 km <span class="sep">·</span> 車程 ≈3 h</div>
+        <ul class="day-list">
+          <li><b>清晨</b>：走 <b>Mt John Summit Walk</b>（環狀約 3 小時，360° 俯瞰 Mackenzie 盆地與蒂卡波湖），或湖畔悠閒散步、泡 Tekapo Springs 溫泉。</li>
+          <li><b>沿途</b>：Burkes Pass、Fairlie（烘焙名店）、Geraldine 小鎮午餐、Rakaia Gorge 峽谷步道（時間充裕再停）。</li>
+          <li><b>午後</b>：跨過 Canterbury Plains 抵達基督城。</li>
+          <li><b>傍晚</b>：市區漫步——<b>Avon River 雅芳河</b>撐篙、<b>Botanic Gardens 植物園</b>、紙教堂，晚餐到 <b>Riverside Market</b>。</li>
+        </ul>
+        <div class="stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          住宿：Christchurch（<b>今晚一定要住基督城</b>，見下方離境規劃）
+        </div>
+        <div class="tip"><b>重點提醒：</b>Lake Tekapo → 基督城是內陸平順公路（SH8 / SH79），沒有高山隘口，但午後平原風大、車流較多，仍請預留彈性時間。</div>
+      </div>
+    </article>
+
+    <!-- Day 8 -->
+    <article class="day reveal">
+      <div class="day-img" style="background-image:url('images/christchurch.png')">
+        <div class="day-badge"><b>08</b><small>3/6 六</small></div>
+      </div>
+      <div class="day-body">
+        <div class="day-date">Day 8 · 3月6日（六）</div>
+        <h3>基督城悠閒上午 → 機場（17:00 班機）</h3>
+        <div class="day-route">Christchurch → Christchurch Airport</div>
+        <div class="route-chip">≈15 km <span class="sep">·</span> 車程 ≈20–30 min</div>
+        <ul class="day-list">
+          <li><b>上午</b>：Riverside Market 早餐、Botanic Gardens 散步，或到 New Brighton 海灘圖書館看海。</li>
+          <li><b>中午</b>：回飯店整理行李、<b>加滿油後還車</b>（預留約 1 小時檢查時間）。</li>
+          <li><b>約 13:30–14:00</b>：抵達基督城機場。國際線建議起飛前 3 小時、國內線 1.5–2 小時。</li>
+          <li><b>17:00</b>：起飛，8 天 7 夜的南島內陸環線圓滿結束。</li>
+        </ul>
+        <div class="stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          機場周邊：還車點多位於機場航廈或租車專用停車區
+        </div>
+        <div class="tip"><b>彈性選擇：</b>若時間充裕，機場旁 5 分鐘車程的 International Antarctic Centre 南極中心很適合打發候機前的 2 小時。</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SPOTS -->
+<section class="section" id="spots">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Must-See Nature</span>
+      <h2 class="section-title">大自然必去景點清單</h2>
+      <p class="section-lead">這趟旅程真正的主角。以下 10 個點是南島內陸自然景觀的精華，全部都能在這條路線上串成一氣。</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/milford.png')"><span class="spot-tag">峽灣</span></div>
+        <div class="spot-body">
+          <h4>米佛峽灣</h4>
+          <div class="en">Milford Sound · Fiordland</div>
+          <p>世界第八大奇景。Mitre Peak 米特峰從海面直拔 1,692 公尺，瀑布沿垂直峭壁傾瀉而下，是整趟旅程最震撼的一幕。</p>
+          <div class="spot-meta"><span>遊船 2h</span><span>建議清晨班次</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/glowworm_cave.png')"><span class="spot-tag">地底奇景</span></div>
+        <div class="spot-body">
+          <h4>蒂阿瑙螢火蟲洞</h4>
+          <div class="en">Te Anau Glowworm Caves</div>
+          <p>搭船橫渡蒂阿瑙湖，走進地下石灰岩洞，乘小船滑進黑暗，頭頂是成千上萬藍綠色光點，宛如置身地底的銀河。</p>
+          <div class="spot-meta"><span>導覽約 2h15</span><span>需預約</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/wanaka.png')"><span class="spot-tag">湖泊</span></div>
+        <div class="spot-body">
+          <h4>瓦納卡湖 & 那棵樹</h4>
+          <div class="en">Lake Wānaka · That Wanaka Tree</div>
+          <p>湖中孤樹是紐西蘭最知名的攝影題材。黃昏與清晨的光線配上遠方南阿爾卑斯山，隨手一拍都是明信片。</p>
+          <div class="spot-meta"><span>拍照點</span><span>免費</span><span>短程散步</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/hooker_valley.png')"><span class="spot-tag">高山健行</span></div>
+        <div class="spot-body">
+          <h4>庫克山 & Hooker Valley</h4>
+          <div class="en">Aoraki / Mount Cook · Hooker Valley Track</div>
+          <p>紐西蘭最高峰。經典步道 10 km 來回、約 3 小時，跨三座吊橋沿冰河谷直抵漂著冰山的 Hooker 冰河湖，全程平緩好走。</p>
+          <div class="spot-meta"><span>10 km / 3h</span><span>平緩好走</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/pukaki.png')"><span class="spot-tag">湖泊</span></div>
+        <div class="spot-body">
+          <h4>普卡基湖</h4>
+          <div class="en">Lake Pukaki</div>
+          <p>湖水藍得誇張，正面對著庫克山。SH80 沿湖而行，是南島最上鏡的公路景觀之一，適合安排中途停留拍照。</p>
+          <div class="spot-meta"><span>公路沿線</span><span>庫克山展望</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/good_shepherd.png')"><span class="spot-tag">教堂</span></div>
+        <div class="spot-body">
+          <h4>好牧羊人教堂</h4>
+          <div class="en">Church of the Good Shepherd</div>
+          <p>1935 年以當地石材砌成的迷你教堂，獨自站在蒂卡波湖畔的草坡上，背後是冰川湖藍與南阿爾卑斯山，極簡而神聖。</p>
+          <div class="spot-meta"><span>湖畔地標</span><span>日出／黃昏最美</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/tekapo.png')"><span class="spot-tag">湖泊</span></div>
+        <div class="spot-body">
+          <h4>蒂卡波湖</h4>
+          <div class="en">Lake Tekapo · Mackenzie</div>
+          <p>冰川岩粉造就的土耳其藍湖水，被金色的草坡與遠山環抱。白天走 Mt John Summit Walk，晚上換成一整片星空。</p>
+          <div class="spot-meta"><span>Mt John 環狀 3h</span><span>湖濱步道</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/tekapo_stars.png')"><span class="spot-tag">觀星</span></div>
+        <div class="spot-body">
+          <h4>蒂卡波暗空保護區觀星</h4>
+          <div class="en">Aoraki Mackenzie Dark Sky Reserve</div>
+          <p>全球最大的國際暗空保護區之一。無光害的夜空裡銀河清晰、南十字高掛；可自行湖畔觀賞，或參加專業導覽。</p>
+          <div class="spot-meta"><span>導覽需預訂</span><span>查月相</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/lindis_pass.png')"><span class="spot-tag">高山隘口</span></div>
+        <div class="spot-body">
+          <h4>林迪斯隘口</h4>
+          <div class="en">Lindis Pass · SH8</div>
+          <p>海拔 965 公尺，是瓦納卡通往 Mackenzie 盆地的門戶。金黃色草坡一路鋪展到天邊，公路筆直穿過層疊山稜，是自駕途中最捨不得開快的一段。</p>
+          <div class="spot-meta"><span>路線必經</span><span>展望點可停</span></div>
+        </div>
+      </article>
+
+      <article class="spot reveal">
+        <div class="spot-img" style="background-image:url('images/mackenzie_basin.png')"><span class="spot-tag">盆地</span></div>
+        <div class="spot-body">
+          <h4>Mackenzie 盆地 & Twizel</h4>
+          <div class="en">Mackenzie Basin · Twizel</div>
+          <p>遼闊的金色草原盆地，公路直指遠方的南阿爾卑斯山與庫克山。Twizel 是盆地裡最實用的補給與住宿基地。</p>
+          <div class="spot-meta"><span>公路景觀</span><span>住宿基地</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DRIVING -->
+<section class="section section-alt" id="driving">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Driving in NZ</span>
+      <h2 class="section-title">自駕注意事項</h2>
+      <p class="section-lead">紐西蘭路況整體良好，但真正讓人意外的不是路有多差，而是「比想像中慢很多」。山路蜿蜒、單線橋多、天氣多變，這幾點務必放在心上。</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <div class="ico">01</div>
+        <h4>靠左行駛 · 方向盤在右</h4>
+        <ul>
+          <li>紐西蘭<b>靠左行駛</b>，駕駛座在右側。剛上路前 1–2 天請格外專注，尤其離開機場與進出圓環時。</li>
+          <li>圓環（Roundabout）：<b>讓右方來車</b>，順時針行進。</li>
+          <li>超車一律從<b>右側</b>；單線路段設有 Passing Lane 供慢車讓行。</li>
+        </ul>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="ico">02</div>
+        <h4>加油與補給</h4>
+        <ul>
+          <li>油種：<b>91 / 95 / 98 無鉛汽油</b>；柴油為黑色油槍（Diesel），加錯代價高昂。</li>
+          <li>多為自助加油，先在店內付款或加完再結帳；偏遠地區營業時間短。</li>
+          <li><b>Milford Sound 沒有加油站</b>，請務必在 Te Anau 加滿；Lindis Pass 與 Mackenzie 盆地之間小鎮加油站間距大，看到加油站就補。</li>
+          <li>Twizel、Omarama 都有加油站，進庫克山前建議在此補滿。</li>
+        </ul>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="ico">03</div>
+        <h4>路況與單線橋</h4>
+        <ul>
+          <li><b>單線橋（One-lane Bridge）</b>非常普遍：標示「Give way」者須讓對向，紅白箭頭指示通行順序。</li>
+          <li>出發前查 <b>NZTA Journey Planner</b>（路況／封閉）與 <b>MetService</b>（天氣）。</li>
+          <li>Milford Road 與 Crown Range 山區路段天候變化快；3 月初少見積雪，但清晨仍可能結霜。</li>
+          <li>山路限速常為 100 km/h，但彎道實際安全車速遠低於此，請依路況行駛。</li>
+        </ul>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="ico">04</div>
+        <h4>安全與野生動物</h4>
+        <ul>
+          <li>紐西蘭最常見的事故原因是<b>疲勞駕駛</b>與<b>誤入對向車道</b>——每 2 小時務必休息。</li>
+          <li>清晨與黃昏注意<b>野生動物</b>：綿羊、負鼠、鹿，以及愛啄車窗的 Kea 啄羊鸚鵡。</li>
+          <li>紐西蘭紫外線極強，車內也要防曬；高山日夜溫差大。</li>
+          <li>偏遠路段手機<b>訊號極弱</b>（尤其 Milford Road），務必下載離線地圖並告知住宿方行程。</li>
+        </ul>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="ico">05</div>
+        <h4>租車建議</h4>
+        <ul>
+          <li>車型選擇 <b>SUV／AWD</b> 最合適：行李空間足、山路與碎石路更穩。</li>
+          <li>務必加購 <b>全險（Excess Waiver）</b>，並登記<b>第二位駕駛</b>（多人輪流開較安全）。</li>
+          <li>選擇<b>不限里程</b>方案，這條路線里程數高，限里程方案容易超支。</li>
+          <li>建議 <b>Queenstown 取車、Christchurch 機場還車</b>（異地還車可能加收費，預訂時先確認）。</li>
+        </ul>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="ico">06</div>
+        <h4>時間估算原則</h4>
+        <ul>
+          <li>Google Maps 的車程在南島<b>普遍偏樂觀</b>，實際請自動加 30–50%。</li>
+          <li>一天純車程建議<b>不超過 5 小時</b>，其餘留給停留與健行。</li>
+          <li>本行程最長的一天是 Day 4（Te Anau → Wānaka ≈260 km），建議早點出發。</li>
+          <li>遇到美景就停，紐西蘭的「路邊觀景台」值得你多留 20 分鐘。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICAL -->
+<section class="section" id="practical">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Good to Know</span>
+      <h2 class="section-title">實用資訊：天氣、穿著與預訂</h2>
+      <p class="section-lead">2 月底到 3 月初是南島的夏末初秋，白天溫暖、早晚偏涼，山區與峽灣天氣隨時可能翻臉。準備對了，旅程就穩了一半。</p>
+    </div>
+
+    <div class="facts reveal">
+      <div class="fact"><div class="big">17–24°C</div><p>平地白天氣溫<br>（2 月底–3 月初）</p></div>
+      <div class="fact"><div class="big">8–15°C</div><p>山區與峽灣<br>白天氣溫</p></div>
+      <div class="fact"><div class="big">5–8°C</div><p>清晨／夜間<br>可能低溫</p></div>
+      <div class="fact"><div class="big">6–7 m</div><p>Milford Sound<br>年均降雨量</p></div>
+    </div>
+
+    <div class="info-grid" style="margin-top:44px;">
+      <div class="info-card reveal">
+        <div class="ico">☁</div>
+        <h4>天氣概況</h4>
+        <ul>
+          <li><b>夏末初秋</b>：白天溫暖，北部與沿海甚至仍像夏天；往南與往高處走會明顯轉涼。</li>
+          <li>山區與內陸（庫克山、Wānaka、Lindis Pass）比沿海冷，3 月山頭可能已見初雪。</li>
+          <li><b>峽灣全年多雨</b>，米佛峽灣年均降雨 6–7 公尺，一天下好幾場雨很正常。</li>
+          <li>一天內可能經歷晴天、陣雨、強風與低溫，請以「變化快」為前提準備。</li>
+        </ul>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="ico">☂</div>
+        <h4>穿著建議（洋蔥式）</h4>
+        <ul>
+          <li><b>底層</b>：排汗快乾材質（避免棉質）。</li>
+          <li><b>中層</b>：刷毛或輕羽絨保暖層。</li>
+          <li><b>外層</b>：<b>防水防風外套</b>——峽灣與山區必備。</li>
+          <li>下半身：快乾長褲；<b>健行鞋</b>（有抓地力，Hooker Valley 與 Key Summit 都適用）。</li>
+          <li>配件：毛帽、手套（清晨／觀星）、太陽眼鏡、高係數防曬（紐西蘭紫外線極強）。</li>
+        </ul>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="ico">✎</div>
+        <h4>需提前預訂</h4>
+        <ul>
+          <li><b>Milford Sound 遊船</b>：熱門班次（尤其早班）建議提前 1–2 個月上網預訂。</li>
+          <li><b>Te Anau 螢火蟲洞導覽</b>：場次有限且常客滿，強烈建議先訂。</li>
+          <li><b>庫克山健行接駁</b>：Hooker Valley 步道口（White Horse Hill）停車位有限，旺季建議早到或利用村內接駁車。</li>
+          <li><b>Tekapo 觀星導覽</b>：Dark Sky Project 名額有限，且受天候影響，請先預約並保留改期彈性。</li>
+          <li><b>Mount Cook Village 住宿</b>：房間極少，是整趟最容易被搶完的一晚。</li>
+        </ul>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="ico">⚙</div>
+        <h4>其他實用小提醒</h4>
+        <ul>
+          <li><b>電壓 230V</b>，插座為 Type I（八字型），需帶轉接頭。</li>
+          <li><b>NZeTA 電子旅行授權</b>：免簽旅客出發前必須線上申請。</li>
+          <li>信用卡／EFTPOS 普及，但偏遠地區建議帶少量現金。</li>
+          <li>旅遊保險＋租車全險務必保；健行與觀星活動建議加保戶外項目。</li>
+          <li>觀星夜請準備<b>紅光手電筒</b>並留意月相；小費非強制，服務好可酌情給予。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTURE -->
+<section class="section section-alt" id="departure">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Final Day Strategy</span>
+      <h2 class="section-title">最後一天離境規劃</h2>
+      <p class="section-lead">2027/3/6（六）是 17:00 的班機，看似充裕，但南島內陸天氣與路況仍可能延誤。最保險的做法只有一個：<b>3/5 晚上就先抵達基督城。</b></p>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-time">3/5（五）傍晚</div>
+        <h4>抵達基督城並住一晚</h4>
+        <p>Lake Tekapo → Christchurch 約 227 km／3 小時。今晚入住基督城（或機場 20–30 分鐘車程內的郊區），隔天完全零風險。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3/6（六）上午</div>
+        <h4>悠閒市區 · 整理行李</h4>
+        <p>Riverside Market 早餐、Botanic Gardens 散步，回飯店整理行李、確認護照與登機資料。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3/6（六）中午</div>
+        <h4>加滿油 · 還車</h4>
+        <p>機場附近加滿油後還車，預留約 1 小時檢查時間（部分租車公司會逐項檢查，忙碌時可能更久）。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3/6（六）13:30–14:00</div>
+        <h4>抵達基督城機場</h4>
+        <p>國際線建議起飛前 <b>3 小時</b>、國內線 <b>1.5–2 小時</b>抵達。市區到機場約 20–30 分鐘。</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3/6（六）17:00</div>
+        <h4>起飛</h4>
+        <p>結束 8 天 7 夜的南島內陸自駕環線。</p>
+      </div>
+    </div>
+
+    <div class="alert reveal">
+      <h3>⚠ 為什麼要 3/5 先住基督城？</h3>
+      <p>Lake Tekapo → 基督城走的是內陸平順公路（SH8 / SH79），沒有高山隘口，正常只要約 3 小時——這也是這條走法最舒服的地方：<b>不必像西海岸那樣翻越天候不穩定的 Arthur's Pass。</b></p>
+      <p>即便如此，仍不建議把「3/5 才從蒂卡波出發、當天直接趕 17:00 班機」當成計畫。內陸公路午後風大、車流多，加上還車與加油瑣事，任何一段延誤都會直接壓縮到登機時間。</p>
+      <p><b>用一晚基督城的住宿，換一整天的安心，非常值得。</b>而且基督城本身有雅芳河、植物園與 Riverside Market，並不無聊。</p>
+    </div>
+
+    <h3 class="reveal" style="color:var(--forest);font-size:1.5rem;margin:52px 0 22px;">住宿安排一覽（7 晚 · 2027）</h3>
+    <table class="stay-table reveal">
+      <thead>
+        <tr><th>日期</th><th>住宿城鎮</th><th>安排說明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2/27（六）</td><td>Queenstown</td><td>晚間抵達休息、取車與超市補給</td></tr>
+        <tr><td>2/28（日）</td><td>Te Anau</td><td>峽灣前哨，湖濱小鎮；當晚可參加螢火蟲洞導覽</td></tr>
+        <tr><td>3/1（一）</td><td>Te Anau</td><td>峽灣遊船後直接回住處，不必長途折返皇后鎮</td></tr>
+        <tr><td>3/2（二）</td><td>Wānaka</td><td>湖景與短程散步，享受小鎮氛圍、拍瓦納卡樹</td></tr>
+        <tr><td>3/3（三）</td><td>Mount Cook Village／Twizel</td><td>庫克山村方便隔天一早進山；Twizel 住宿與餐廳選擇較多</td></tr>
+        <tr><td>3/4（四）</td><td>Lake Tekapo</td><td>晚上安排觀星，視天氣與月相決定是否參加導覽</td></tr>
+        <tr><td>3/5（五）</td><td>Christchurch</td><td><b>務必住基督城</b>，確保 3/6 的 17:00 班機萬無一失</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="f-brand">Queenstown → Christchurch</div>
+  <p>紐西蘭南島內陸自駕 · 8 天 7 夜 · 2027 年 2 月 27 日（六）– 3 月 6 日（六）</p>
+  <div class="f-line"></div>
+  <p>行程中的行車距離與時間為一般天候下的估算值，實際請以當日 NZTA 路況與 MetService 天氣預報為準。</p>
+  <p style="margin-top:14px;font-size:.76rem;opacity:.6;">祝你一路順風，看見世界上最壯闊的風景。</p>
+</footer>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
